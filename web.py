@@ -3,11 +3,13 @@ from joblib import load
 import project
 import time
 from sklearn.preprocessing import StandardScaler
-
+import os
 
 
 def main():
-    model = load("C:\\Users\\Dell\\Desktop\\majorproject\\xgboost_model.pkl")
+    script_directory = os.path.dirname(os.path.abspath(__file__))
+    model_path = os.path.join(script_directory, "xgboost_model.pkl")
+    model = load(model_path)
     st.header("Water Quality Monitoring System")
     input_data = project.fun()
     container = st.container(border=True)
