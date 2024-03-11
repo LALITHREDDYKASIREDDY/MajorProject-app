@@ -8,7 +8,7 @@ from sklearn.preprocessing import StandardScaler
 
 def main():
     model = load("C:\\Users\\Dell\\Desktop\\majorproject\\xgboost_model.pkl")
-    st.title("Water Quality Monitoring System")
+    st.header("Water Quality Monitoring System")
     input_data = project.fun()
     container = st.container(border=True)
     container.header("Water Paramters")

@@ -1,5 +1,5 @@
 import streamlit as st
-# import streamlit_option_menu as som
+import streamlit_option_menu as som
 import model
 import home
 import web
@@ -26,14 +26,14 @@ def update_page(selected_page):
 
 options = ["Home", "Project","Results","Contact"]
 
-# selected_page = som.option_menu(
-#     key=st.session_state["selected_page"],
-#     menu_title=None,
-#     options=options,
-#     icons=["house","book","","envelope"],
-#     default_index=options.index(st.session_state["selected_page"]),
-#     orientation="horizontal",
-#     on_change=update_page
-# )
+selected_page = som.option_menu(
+    key=st.session_state["selected_page"],
+    menu_title=None,
+    options=options,
+    icons=["house","book","","envelope"],
+    default_index=options.index(st.session_state["selected_page"]),
+    orientation="horizontal",
+    on_change=update_page
+)
 update_page(selected_page)
 render_page(st.session_state.selected_page)

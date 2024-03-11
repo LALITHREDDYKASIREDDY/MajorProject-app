@@ -12,7 +12,7 @@ def show():
     st.header("Source Code")
     st.write("This project was completed in fulfillment of the major project requirement.")
     st.write("For source code, please visit the below link...")
-    github_url = "https://github.com/Lalithreddykasireddy"
+    github_url = "https://github.com/LALITHREDDYKASIREDDY/MajorProject-app"
     st.markdown(f"[View source code on GitHub]({github_url})")
     st.header("Contact Us")
     st.write("For any queries:")
